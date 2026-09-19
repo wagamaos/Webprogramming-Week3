@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Inherit Keyword Demo</title>
+  <style>
+    body { color: #0f766e; font-family: 'Georgia', serif; font-size: 18px; padding: 20px; }
+    .parent {
+      color: #f43f5e;
+      font-size: 20px;
+    }
+    .child-inherit { color: inherit; }
+    .child-normal  { }
+    .child-initial { color: initial; }
+
+    .parent-bordered {
+      border: 3px solid #0f766e;
+      padding: 12px;
+      margin-top: 15px;
+    }
+    .inherit-border { border: inherit; }
+    p { margin: 8px 0; }
+  </style>
+</head>
+<body>
+  <div class="parent">
+    <p>Parent — color: red</p>
+    <p class="child-inherit">child color: inherit → red</p>
+    <p class="child-normal">child with no color set → also red (inherits)</p>
+    <p class="child-initial">child color: initial → black (browser default)</p>
+  </div>
+  <hr style="margin: 20px 0;">
+  <div class="parent-bordered">
+    Parent has a border
+    <div class="inherit-border" style="margin-top:8px">border: inherit → same border</div>
+  </div>
+</body>
+</html>

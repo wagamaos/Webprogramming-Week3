@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wang Yi Heng Portfolio</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: linear-gradient(135deg, #fef2f2, #eff6ff, #ecfeff);
+      color: #1e293b;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: rgba(255,255,255,0.9);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-logo {
+      font-weight: bold;
+      font-size: 1.3rem;
+      color: #7c3aed;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-links a {
+      color: #475569;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: #7c3aed;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 5rem 1rem;
+      background: linear-gradient(135deg, #7c3aed, #ec4899, #0ea5e9);
+      color: white;
+    }
+
+    .hero h1 {
+      font-size: 2.6rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.125rem;
+      margin-bottom: 2rem;
+      opacity: 0.95;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: white;
+      color: #7c3aed;
+      padding: 0.8rem 1.7rem;
+      border-radius: 999px;
+      font-weight: bold;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 10px 18px rgba(124, 58, 237, 0.25);
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .profile-card {
+      max-width: 900px;
+      margin: 3rem auto 0;
+      padding: 0 1.5rem;
+    }
+
+    .info-box {
+      background: rgba(255,255,255,0.8);
+      border-radius: 1rem;
+      box-shadow: 0 12px 24px rgba(15, 23, 42, 0.08);
+      border: 1px solid #e9d5ff;
+      padding: 2rem;
+      text-align: left;
+    }
+
+    .info-box h3 {
+      color: #7c3aed;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+
+    .info-box p {
+      color: #334155;
+      margin-bottom: 0.45rem;
+      font-size: 1rem;
+    }
+
+    .skills-section {
+      max-width: 900px;
+      margin: 4rem auto;
+      padding: 0 1.5rem;
+      text-align: center;
+    }
+
+    .skills-section h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: #1e293b;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .skill-card {
+      background: white;
+      padding: 2rem 1.5rem;
+      border-radius: 0.8rem;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.05);
+      border: 1px solid #e2e8f0;
+      text-align: left;
+    }
+
+    .skill-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+      color: #7c3aed;
+    }
+
+    .skill-card p {
+      color: #64748b;
+      font-size: 0.95rem;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #111827;
+      color: #e2e8f0;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <span class="nav-logo">Wang Yi Heng</span>
+    <div class="nav-links">
+      <a href="#profile">Profile</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <h1>Hello, I am Wang Yi Heng!</h1>
+    <p>Admin Number: 202699474 · Country: Singapore · Web Programming Student</p>
+    <a href="#profile" class="btn">View Profile</a>
+  </section>
+
+  <section class="profile-card" id="profile">
+    <div class="info-box">
+      <h3>Personal Information</h3>
+      <p><strong>Name:</strong> Wang Yi Heng</p>
+      <p><strong>Admin Number:</strong> 202699474</p>
+      <p><strong>Country:</strong> Singapore</p>
+      <p><strong>Course:</strong> Web Programming</p>
+    </div>
+  </section>
+
+  <section class="skills-section" id="skills">
+    <h2>What I Know</h2>
+    <div class="skills-grid">
+      <div class="skill-card"><h3>HTML5</h3><p>Page structure and content</p></div>
+      <div class="skill-card"><h3>CSS3</h3><p>Design, color, layout, and style</p></div>
+      <div class="skill-card"><h3>Flexbox</h3><p>Responsive arrangement of content</p></div>
+    </div>
+  </section>
+
+  <footer class="footer" id="contact">
+    <p>Wang Yi Heng &copy; 2026 · Singapore · Web Programming</p>
+  </footer>
+</body>
+</html>

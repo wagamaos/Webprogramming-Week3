@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8">
+<style>
+  :root {
+    --primary: #2563eb;
+    --accent: #3b82f6;
+    --bg: #f8fafc;
+    --text: #1e293b;
+    --card-bg: #ffffff;
+    --radius: 12px;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --primary: #7c3aed;
+      --accent: #a78bfa;
+      --bg: #0f172a;
+      --text: #f1f5f9;
+      --card-bg: #1e293b;
+    }
+  }
+
+  body { 
+    background: linear-gradient(135deg, var(--bg), #e0f2fe); 
+    color: var(--text); 
+    font-family: sans-serif; 
+    padding: 30px; 
+    transition: background 0.3s, color 0.3s;
+  }
+
+  .btn {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: white; 
+    border: none; 
+    padding: 12px 22px; 
+    border-radius: var(--radius);
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s, opacity 0.2s;
+  }
+
+  .btn:hover {
+    opacity: 0.95;
+    transform: translateY(-2px);
+  }
+
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--accent);
+    border-radius: var(--radius);
+    padding: 22px; 
+    margin-top: 18px;
+    box-shadow: 0 8px 18px rgba(37, 99, 235, 0.08);
+  }
+
+  .meta {
+    margin-top: 8px;
+    color: #7c3aed;
+    font-weight: 700;
+    font-size: 0.9rem;
+  }
+</style>
+</head>
+<body>
+  <button class="btn">Wang Yi Heng</button>
+  <div class="card">
+    Admin Number: 202699474<br>
+    Country: Singapore
+    <div class="meta">Web Programming Portfolio</div>
+  </div>
+</body>
+</html>

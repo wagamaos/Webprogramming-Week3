@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<style>
+  :root {
+    --primary: #7c3aed;
+    --accent: #a78bfa;
+    --bg: #f5f3ff;
+    --card-bg: #ffffff;
+    --text: #1e293b;
+    --border: #ddd6fe;
+    --radius: 16px;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --primary: #8b5cf6;
+      --accent: #c4b5fd;
+      --bg: #0f172a;
+      --card-bg: #1e293b;
+      --text: #f1f5f9;
+      --border: #4c1d95;
+    }
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: sans-serif;
+    background: linear-gradient(135deg, var(--bg), #ecfeff);
+    color: var(--text);
+    padding: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+    transition: background 0.3s, color 0.3s;
+  }
+
+  h1 {
+    margin-bottom: 24px;
+    text-align: center;
+    color: var(--primary);
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  @media (min-width: 640px) {
+    .grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    padding: 24px;
+    border-radius: var(--radius);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 12px 24px rgba(124, 58, 237, 0.08);
+  }
+
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 30px rgba(124, 58, 237, 0.12);
+  }
+
+  .card[data-icon]::before {
+    content: attr(data-icon) ' ';
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 12px;
+  }
+</style>
+</head>
+<body>
+  <h1>Wang Yi Heng</h1>
+  <div class="grid">
+    <div class="card" data-icon="🌐">HTML5 — personal website structure</div>
+    <div class="card" data-icon="🎨">CSS3 — creative styling</div>
+    <div class="card" data-icon="⚡">Admin — 202699474</div>
+    <div class="card" data-icon="📍">Singapore — country</div>
+    <div class="card" data-icon="📐">Flexbox — layout experiments</div>
+    <div class="card" data-icon="🗂">Portfolio — creative web work</div>
+  </div>
+</body>
+</html>
